@@ -1,0 +1,43 @@
+- var top_nav = [{name: 'О нас', link: 'index.html'}, {name: 'Оформление свадеб', link: 'services.html'}, {name: 'Доставка и оплата', link: 'about.html'}, {name: 'Отзывы', link: 'portfolio.html'}, {name: 'Контакты', link: 'contacts.html'}];
+- var navigation = ['Акции', 'Хит продаж', 'Букеты', 'Свадебные', 'Цвет', 'Время года', 'Повод', 'Цена', 'Подарки'];
+
+header
+  .header-top
+    .container.row.middle.between
+      .logo
+        a(href="#")
+          img(src="/assets/img/logo.png", alt="logo")
+      .top-nav
+        ul
+          each item in top_nav
+            li
+              a(href= item.link)=item.name
+
+      .top-contact
+        .soc-icon
+          a(href="")
+            img(src="/assets/img/Viber.png", alt="")
+          a(href="")
+            img(src="/assets/img/tg.png", alt="")
+          a(href="")
+            img(src="/assets/img/WhatsApp.png", alt="")
+        .tel-number
+          a(href="tel:+79126774846") +7(912)677-48-46
+  .header-middle
+    .container.row.middle.end
+      .site-title Доставка цветов в Екатеринбурге
+      .market-header-actions
+        .status
+          a(href="") <span class='icon-status'></span> статус заказа
+        .header-cart
+          a(href="") корзина <span class='icon-basket'></span>
+  .header-bottom
+    .container.row.middle.between
+      a(href="") <span class='icon-flowers'></span> Подобрать букет
+      ul
+        each item in navigation
+            li
+              a(href="#")=item
+      .header-search
+        input(type="text", placeholder='Поиск букета')
+

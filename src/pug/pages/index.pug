@@ -1,0 +1,127 @@
+extends ../layout/main
+
+block variables
+  - var title = 'Главная - Король Пион';
+
+block content
+  section
+    .container
+      .block-title.center Акции
+      .products-wrap
+        each _ in Array(2)
+          +product_card('/assets/img/card-1.png', 'Пионы белые', '1 350 р.', '450 р.')
+          +product_card('/assets/img/card-2.png', 'Букет с розами, альстромерией, гвоздикой и герберой «искры чувств»', '10 150 р.', '11 450 р.')
+          +product_card('/assets/img/card-3.png', 'Букет в круглой сумочке с альстромерией и розами', '1 950 р.', '850 р.')
+          +product_card('/assets/img/card-4.png', 'Пионы «Сара Бернар»', '350 р.', '450 р.')
+      .btn-wrap.center
+        a(href="#") Показать еще
+
+  section.text-block-wrap
+    .container
+      .row
+        .col
+          .text-block
+            .text-container
+              .text-title Ничего не делаем под копирку
+              p Наши цветочные феи придумывают и собирают дизайнерские композиции. Вот что мы предлагаем:
+            .number 1
+        .col
+          .text-block
+            .text-container
+              .text-title Готовые букеты
+              p В нашем каталоге около 400 авторских решений на любой вкус, повод и возраст. Напишите или позвоните нам — консультант подскажет, как угодить адресату.
+            .number 2
+        .col
+          .text-block
+            .text-container
+              .text-title Оригинальные букеты
+              p Вариант для придирчивых. Изложите свои пожелания, и флористы воспроизведут композицию. Стоимость зависит от размера, цветов в составе и деталей украшения.
+            .number 3
+
+    section
+    .container
+      .block-title.center Хиты продаж
+      .products-wrap
+        each _ in Array(3)
+          +product_card('/assets/img/card-1.png', 'Пионы белые', '1 350 р.', '450 р.')
+          +product_card('/assets/img/card-2.png', 'Букет с розами, альстромерией, гвоздикой и герберой «искры чувств»', '10 150 р.', '11 450 р.')
+          +product_card('/assets/img/card-3.png', 'Букет в круглой сумочке с альстромерией и розами', '1 950 р.', '850 р.')
+          +product_card('/assets/img/card-4.png', 'Пионы «Сара Бернар»', '350 р.', '450 р.')
+      .btn-wrap.center
+        a(href="#") Показать еще
+
+  section.text-block-wrap
+    .container
+      .row
+        .col
+          .text-block
+            .text-container
+              .text-title Хочу букет как на фото
+              p Понравились цветы в журнале или магазине? Отправляйте нам фото: сделаем так же. Цена тоже определяется размером, составом и оформлением.
+            .number 4
+        .col
+          .text-block
+            .text-container
+              .text-title Предложите вашу цену
+              p Назначьте цену при заказе и сообщите о своих пожеланиях. Даже недорогие букеты выглядят великолепно при умелом оформлении.
+            .number 5
+        .col
+          .text-block
+            .text-container
+              .text-title Для избалованных
+              p Салон идет в ногу с флористической модой и предлагает искушенным заказчикам букеты:
+            .number 6
+      
+  section.home-slider-wrap.bg-accent
+    .container
+      .row
+        .left
+          .block-title Собери букет по фотографии
+          p Вышлите нам фотографию букета, мы соберем букет по вашему образцу
+          .btn-wrap
+            a(href="#") Отправить фото
+        .right
+          .swiper-container.home-slider
+            .swiper-wrapper
+              .swiper-slide
+                img(src="/assets/img/home-slider.png")
+              .swiper-slide
+                img(src="/assets/img/home-slider.png")
+              .swiper-slide
+                img(src="/assets/img/home-slider.png")
+          .swiper-controls
+            .button-prev
+              img(src="/assets/img/left.svg", alt="left")
+            .button-next
+              img(src="/assets/img/right.svg", alt="right")
+  section.home-reviews-wrap
+    .container
+      .block-title.center Отзывы
+      .swiper-container.home-reviews
+        .swiper-wrapper
+          .swiper-slide
+            .reviews-item
+              img(src="/assets/img/reviews-1.png", alt="")
+              .name Григорий
+              .text Смело могу рекомендовать данный магазин, потому что сюда действительно хочется вернуться. Цветы очень красивые и свежие. 
+              a(href="") Читать весь отзыв
+          .swiper-slide
+            .reviews-item
+              img(src="/assets/img/reviews-2.png", alt="")
+              .name Карина
+              .text Обалденные тюльпаны заказывали, букет был составлен восхитительно. Магазин удобный, работает без выходных, что важно!
+              a(href="") Читать весь отзыв
+          .swiper-slide
+            .reviews-item
+              img(src="/assets/img/reviews-3.png", alt="")
+              .name Алена Моренко
+              .text Очень крутой магазин! Покупала букет маме на день рождения, она просто пищала от восторга=))) Классное обслуживание, цветы...
+          .swiper-slide
+            .reviews-item
+              img(src="/assets/img/reviews-1.png", alt="")
+              .name Константин
+              .text Смело могу рекомендовать данный магазин, потому что сюда действительно хочется вернуться. Цветы очень красивые и свежие. 
+        .swiper-controls
+          .swiper-pagination
+      .btn-wrap.center
+        a(href="#") Больше отывов на Флампе

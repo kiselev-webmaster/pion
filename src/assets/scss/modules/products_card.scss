@@ -1,0 +1,86 @@
+.products-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+    .product-card-wrap{
+        width: 25%;
+        padding: 10px;
+        .product-card{
+            a{display: block}
+
+            img{
+                height: 305px;
+                width: 100%;
+                object-fit: cover;
+            }
+            .product-image{
+                position: relative;
+                .hover{
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background: #e3a23a5d;
+                    display: none;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    z-index: 999;
+                    a{
+                        font-family: Lora;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 14px;
+                        line-height: 26px;
+                        text-align: center;
+                        color: #FBF8F5;
+                        border: 1px solid #FBF8F5;
+                        padding: 10px 25px;
+                        border-radius: 50px;
+                        margin: 5px 0;
+                        width: 60%;
+                        &.pay{
+                            background: #E3A33A;
+                            border-color: #E3A33A;
+                        }
+                    }
+                }
+            }
+            .product-info{
+                display: flex;
+                font-family: Lora;
+                font-style: normal;
+                font-weight: normal;
+                margin-top: 10px;
+                .left{
+                    padding-right: 10px;
+                    flex: 1;
+                }
+                .right{
+                    text-align: right;
+                    flex-shrink: 0;
+                }
+                .product-title{
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                .price{
+                    font-weight: bold;
+                    font-size: 20px;
+                    line-height: 26px;
+                    color: #E3A33A;
+                }
+                .price-old{
+                    font-size: 14px;
+                    line-height: 18px;
+                    color: #939598;
+                    text-decoration: line-through;
+                }
+            }
+            &:hover .hover{
+                display: flex;
+            }
+        }
+    }
+}

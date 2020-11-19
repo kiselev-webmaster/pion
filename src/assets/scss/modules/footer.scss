@@ -1,0 +1,19 @@
+footer{
+    background: #F1EBE5;
+    padding: 30px 0;
+    box-shadow: 0px 0px 6px rgba(1, 20, 47, 0.25);
+    p, a{
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 28px;
+    }
+    .col{
+        flex: 1;
+        &>*{
+            margin-bottom: 15px;
+        }
+    }
+    p, ul, .soc-icon{
+        margin-top: 20px;
+    }
+}

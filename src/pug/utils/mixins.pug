@@ -1,0 +1,16 @@
+mixin product_card(img, title, price, price_old)
+  .product-card-wrap
+    .product-card
+      .product-image
+        img(src= img, alt= title)
+        .hover
+          a(href="#", class="pay" ) Купить
+          a(href="#") Подробнее
+      .product-info
+        .left
+          .product-title= title
+        .right
+          .price= price
+          if price_old
+            .price-old= price_old
+

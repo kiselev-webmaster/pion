@@ -1,0 +1,100 @@
+extends ../layout/main
+
+block variables
+  - var title = 'Каталог - Король Пион';
+
+block content
+  section
+    .container
+      .block-title.center Подарочные букеты цветов с доставкой
+      .row.middle.between.catalog-top-block
+        .left
+          .breadcrumbs
+            a(href="#") Главная
+            span.sep >
+            a(href="#") Каталог
+            span.sep >
+            span.current Букеты из роз
+        .right
+          .filter-catalog
+            .filter-title Сортировать по:
+            .radio-wrap
+              
+              input(type="radio", name="filter", id="radio_1", checked)
+              label(for="radio_1") возрастанию цены
+            .radio-wrap
+              
+              input(type="radio", name="filter", id="radio_2")
+              label(for="radio_2") убыванию цены
+      .products-wrap
+        each _ in Array(6)
+          +product_card('/assets/img/card-1.png', 'Пионы белые', '1 350 р.', '450 р.')
+          +product_card('/assets/img/card-2.png', 'Букет с розами, альстромерией, гвоздикой и герберой «искры чувств»', '10 150 р.', '11 450 р.')
+          +product_card('/assets/img/card-3.png', 'Букет в круглой сумочке с альстромерией и розами', '1 950 р.', '850 р.')
+          +product_card('/assets/img/card-4.png', 'Пионы «Сара Бернар»', '350 р.', '450 р.')
+      .btn-wrap.center
+        a(href="#") Показать еще
+  section
+    .container
+      .block-title.center Как оформить букет из роз?
+        p Дарение цветов — искусство. Дизайнер-флорист разбирается в цветочном этикете. Оформление композиции зависит от того, для кого предназначается подарок, и согласуется с покупателем
+      img(src="/assets/img/catalog_img.png", alt="")
+      .text-block-wrap
+        .row
+          .col
+            .text-block
+              .text-container
+                .text-title Для юной девушки
+                p выберите нежные розовые розы и дополните букет фиалками, ландышами, лилиями;
+          .col
+            .text-block
+              .text-container
+                .text-title Распустившиеся розы 
+                p дарят любимой женщине. Белые символизируют признание в любви, алые или бордовые — желание
+          .col
+            .text-block
+              .text-container
+                .text-title Цветы для мужчины 
+                p должны быть одного цвета и на длинных стеблях
+          .col
+            .text-block
+              .text-container
+                .text-title Правила этикета
+                p не рекомендуют дарить пожилым людям белые цветы. Выбирайте розы элегантных тонов, а также лилии и хризантемы
+        .row
+          .col
+            .text-block
+              .text-container
+                .text-title Популярный и беспроигрышный вариант
+                p купить букет из 25 роз длиною 40 или 60 см. Хотите впечатлить адресата? Закажите букет из 101 розы. Дополним цветы мягкой игрушкой, открыткой или сладостями, оформим бумагой и лентами.
+          .col
+            .text-block
+              .text-container
+                .text-title <b>Если точно знаете, какие цветы любит адресат, правилам можно не следовать.</b>
+  section
+    .container
+      .block-title.center 4 причины купить букет роз в салоне «Король Пион»
+        p Цветы оформляем бумагой и лентами. По желанию заказчика дополняем
+      .text-block-wrap.style-light
+        .row
+          .col
+            .text-block
+              .number 1
+              .text-container
+                p Свежие цветы всегда в наличии, а композиция будет готова в срок
+          .col
+            .text-block
+              .number 2
+              .text-container
+                p Сфотографируем букет перед отправкой и отправим фото вам: в качестве работы уверены!
+          .col
+            .text-block
+              .number 3
+              .text-container
+                p Доставим к указанному времени. Если желаете, анонимно. При заказе от 4000 руб. — бесплатно.
+          .col
+            .text-block
+              .number 4
+              .text-container
+                p Со второго заказа действует 5%-скидка: рады видеть вас снова!
+              

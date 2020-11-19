@@ -1,0 +1,45 @@
+.catalog-top-block{
+    margin-bottom: 10px;
+}
+
+.breadcrumbs{
+    font-size: 14px;
+    a, span{
+        color: #D5D5D5;
+    }
+    span.sep{
+        padding: 0 5px;
+    }
+    span.current{
+        color: #000;
+    }
+}
+
+.filter-catalog{
+    display: flex;
+    align-items: center;
+    .filter-title{
+        font-size: 14px;
+    }
+
+    input[type=checkbox], input[type=radio] {
+		position: absolute;
+		z-index: -1;
+		opacity: 0;
+
+		&+label{
+			font-size: 14px;
+            color: #939598;
+            padding: 2px 5px;
+            margin-left: 10px;
+			&:hover{
+				cursor: pointer;
+				color: $primary-color;
+			}
+		}
+		&:checked+label{
+			background: #FAE6C6;
+			color: #1A2026;
+		}
+	}
+}

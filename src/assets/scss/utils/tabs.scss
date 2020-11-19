@@ -1,0 +1,42 @@
+ul.tabs{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    li{
+        &.tab-link{
+            background: #F1EBE5;
+            padding: 5px 20px;
+            cursor: pointer;
+
+            position: relative;
+            &:after{
+                content: '';
+                display: block;
+                height: 80%;
+                width: 1px;
+                background: rgba(119, 119, 119, 0.3);
+                position: absolute;
+                left: 0;
+                top: 10%;
+            }
+            &:first-child{
+                border-radius: 20px 0 0 20px;
+                &:after{display: none;}
+            }
+            &:last-child{
+                border-radius: 0 20px 20px 0;
+                
+            }
+        }
+        &.current{
+            background: #F8DDC3;
+            &:after, &+li:after{display: none;}
+        }
+    }
+}
+.tab-content{
+    display: none;
+    &.current{
+        display: block;
+    }
+}
