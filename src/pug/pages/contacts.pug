@@ -1,0 +1,91 @@
+extends ../layout/main
+
+block variables
+  - var title = 'Контакты - Король Пион';
+
+block content
+    section
+        .block-title.center Контакты
+        script(type='text/javascript' charset='utf-8' async='' src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A652a04840455075b572f4801070ff0d7bbb71a7d243a66419bcf240885129ea2&width=100%25&height=500&lang=ru_RU&scroll=true')
+        .container.mt45
+            .grid
+                .col
+                    .city 
+                        span.icon-phone
+                        a(href="tel:+7 (912) 677 48 46") +7 (912) 677 48 46
+                .col
+                    .city
+                        span.icon-email
+                        a(href="mailto:info@korolpion.ru") info@korolpion.ru
+                .col
+                    .city <span class="icon-map" ></span> г. Екатеринбург, ул. Чапаева, д. 21
+    section.bg-accent
+        .container-small
+            .block-title Реквизиты магазина
+            .grid-noBottom.block-two-text.p-20.border
+                .col
+                    .sub-title Полное наименование организации:
+                .col
+                    p(class="mb0") Индивидуальный предприниматель Хмылина Наталья Алексеевна
+            .grid-noBottom.block-two-text.p-20.border-bottom
+                .col
+                    .sub-title ИНН:
+                .col
+                    p(class="mb0") 660402024824
+            .grid-noBottom.block-two-text.p-20.border-bottom
+                .col
+                    .sub-title ОГРН:
+                .col
+                    p(class="mb0") 316965800115089
+            .grid-noBottom.block-two-text.p-20.border-bottom
+                .col
+                    .sub-title Расчетный счет:
+                .col
+                    p(class="mb0") 40802810500000149383
+            .grid-noBottom.block-two-text.p-20.border-bottom
+                .col
+                    .sub-title Банк:
+                .col
+                    p(class="mb0") АО «ТИНЬКОФФ БАНК»
+            .grid-noBottom.block-two-text.p-20.border-bottom
+                .col
+                    .sub-title Юридический адрес банка:
+                .col
+                    p(class="mb0") Москва, 123060, 1-й Волоколамский проезд, д. 10, стр. 1
+            .grid-noBottom.block-two-text.p-20.border-bottom
+                .col
+                    .sub-title Корр.счет  банка:
+                .col
+                    p(class="mb0") 30101810145250000974
+            .grid-noBottom.block-two-text.p-20.border-bottom
+                .col
+                    .sub-title ИНН банка:
+                .col
+                    p(class="mb0") 7710140679
+            .grid-noBottom.block-two-text.p-20.border-bottom
+                .col
+                    .sub-title БИК банка:
+                .col
+                    p(class="mb0") 044525974
+    section.block-feedback.pt80.pb80
+        .container
+            .grid
+                .col
+                    .title Остались вопросы?
+                    p Оставьте нам свои контактные данные, мы перевоним  </br>и ответим на все интерисующие вопросы:
+                .col
+                    .row
+                        .col
+                            input(type="text", placeholder='Ваше имя')
+                        .col
+                            input(type="email", placeholder='Email')
+                    .row
+                        .col
+                            input(type="tel", placeholder='+7(901) 909 99 99')
+                        .col
+                            
+                    .row
+                        .col
+                            textarea(rows="2")
+                            +checkbox('Нажимая кнопку «Отправить» Вы соглашаетесь  с Политикой конфиденциальности данного сайта', 'agreement')
+                            input(type="button", value="Отправить")

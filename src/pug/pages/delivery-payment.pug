@@ -1,0 +1,116 @@
+extends ../layout/main
+
+block variables
+  - var title = 'Доставка и оплата - Король Пион';
+
+block content
+    section
+        .container
+            .block-title.center Доставка и оплпата
+                p Наша служба доставки работает не только в <span style="text-decoration: underline">Екатеринбурге</span>, </br>но и с близлежащими городами, такими как:
+            .grid
+                .col
+                    .city <span class="icon-map" ></span> Арамиль
+                .col
+                    .city <span class="icon-map" ></span> Верхняя Пышма
+                .col
+                    .city <span class="icon-map" ></span> Березовский
+            p(style="font-weight: 300; line-height: 28px; color: #1a2026; text-align: center; margin-bottom: 1rem;") Так же мы всегда готовы доставить ваши заказы и в более дальние <br>населённые пункты, такие как:
+            .grid
+                .col
+                    .city <span class="icon-map" ></span> Дектярск
+                .col
+                    .city <span class="icon-map" ></span> Первоуральск
+                .col
+                    .city <span class="icon-map" ></span> Полевской
+                .col
+                    .city <span class="icon-map" ></span> Ревда
+    section.bg-accent
+        .container-small
+            .block-title Условия доставки по Екатеринбургу
+            .grid.block-two-text.p-20.border
+                .col
+                    .sub-title Бесплатная доставка
+                .col
+                    p букетов по Екатеринбургу при заказе на сумму от 4000 руб.
+            .grid.block-two-text.p-20.border-bottom
+                .col
+                    .sub-title 300 рублей
+                .col
+                    p при заказе на сумму до 4000 руб.
+            .block-title(style="margin-top: 115px") Условия доставки в ближайшие города
+            .grid.block-two-text.p-20.border
+                .col
+                    .sub-title Расстояние и время доставки
+                .col
+                    p расчет стоимости доставки за пределы города Екатеринбурга производится при помощи специальной программы-калькулятора, исходя из расстояния и времени доставки.
+            .grid.block-two-text.p-20.border-bottom
+                .col
+                    .sub-title При заказе на сумму свыше 4000 р.
+                .col
+                    p стоимость доставки в другой город уменьшается на 300 руб. от расчетной
+    section
+        .container
+            .block-title.center Оплата
+                p Принимаем любую форму оплаты:
+                .text-block-wrap.center
+                    .row
+                        .col
+                            .text-block
+                                img(src="/assets/img/payment-1.svg", alt="")
+                                .text-container
+                                    .text-title Безналичный расчет
+                                    p посредством платежной онлайн-системы, установленной на сайте
+                        .col
+                            .text-block
+                                img(src="/assets/img/payment-2.svg", alt="")
+                                .text-container
+                                    .text-title Перевод с карты на карту
+                                    p банков  ПАО «Сбербанк» или «Тинькофф Банк»
+                        .col
+                            .text-block
+                                img(src="/assets/img/payment-3.svg", alt="")
+                                .text-container
+                                    .text-title Наличными курьеру
+                                    p при заказе стоимостью свыше 4000 руб. требуется предоплата от 1000 руб.
+                p(style="font-weight: 300; line-height: 28px; color: #1a2026; text-align: center;") <span class="icon-info"></span> при самостоятельном заборе заказа, оплату можно произвести также наличными в магазине или </br>безналичным способом оплаты картой VISA или Mastercard.    
+    section.bg-accent
+        .container-small
+            .block-title.center Сроки доставки
+            .grid.block-two-text.p-20.border
+                .col
+                    .sub-title В любой день недели:
+                .col
+                    p с 10.00 утра и до 22.00 вечера.
+            .grid.block-two-text.p-20.border-bottom
+                .col
+                    .sub-title В день заказа 
+                .col
+                    p или в любой выбранный Вами с указанием времени.
+            .grid.block-two-text.p-20
+                .col
+                .col
+                    p(class="mb10" ) При необходимости, точное время доставки обговаривается с менеджером по телефону ниже
+                    a(href="tel:+7(912)677-48-46", class="sub-title" ) +7(912)677-48-46
+    section.block-feedback.pt80.pb80
+        .container
+            .grid
+                .col
+                    .title Остались вопросы?
+                    p Оставьте нам свои контактные данные, мы перевоним  </br>и ответим на все интерисующие вопросы:
+                .col
+                    .row
+                        .col
+                            input(type="text", placeholder='Ваше имя')
+                        .col
+                            input(type="email", placeholder='Email')
+                    .row
+                        .col
+                            input(type="tel", placeholder='+7(901) 909 99 99')
+                        .col
+                            
+                    .row
+                        .col
+                            textarea(rows="2")
+                            +checkbox('Нажимая кнопку «Отправить» Вы соглашаетесь  с Политикой конфиденциальности данного сайта', 'agreement')
+                            input(type="button", value="Отправить")

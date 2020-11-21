@@ -1,5 +1,12 @@
+//var $ = require( "jquery" );
+
+const jquery = require("jquery");
+const $ = require("jquery");
+const jQuery = require("jquery");
+window.jQuery = $;
+const fancybox = require("@fancyapps/fancybox"); 
+
 import Swiper from "swiper";
-var $ = require( "jquery" );
 
 new Swiper('div.home-slider', {
     loop: true,
@@ -21,7 +28,7 @@ new Swiper('div.home-slider', {
     // If we need pagination
     pagination: {
       el: '.home-reviews-wrap .swiper-pagination',
-      clickable: true
+      clickable: true 
     },
   
     // Navigation arrows
@@ -62,6 +69,10 @@ $(document).ready(function(){
 
 		$(this).addClass('current');
 		$("#"+tab_id).addClass('current');
-	})
+  })
+  
+  $('[data-fancybox="gallery"]').fancybox({
+    // Options will go here
+  });
 
 })

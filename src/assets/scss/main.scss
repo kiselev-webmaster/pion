@@ -8,6 +8,8 @@
 @import "utils/icon";
 @import "utils/swiper-bundle.min.css";
 @import "utils/tabs";
+@import "utils/popup";
+@import "utils/form";
 html {
   line-height: $mainLineHeight;
 	font-size: $mainFontSize;
@@ -221,6 +223,7 @@ section, .section {
 
 .bg-accent{
   background: #F1EBE5;
+  padding: 115px 0;
 }
 .bg-accent-1{
   background: #E3A33A;
@@ -236,6 +239,12 @@ section, .section {
 
 .block-two-text{
   padding: 40px 0;
+  &.p-20{
+    padding: 20px;
+  }
+  &.border{border-top: 1px solid #A8A6A3;  border-bottom: 1px solid #A8A6A3;}
+  &.border-top{border-top: 1px solid #A8A6A3;  }
+  &.border-bottom{border-bottom: 1px solid #A8A6A3;  }
   .sub-title{
     font-family: Lora;
     font-style: normal;
@@ -256,6 +265,21 @@ section, .section {
     margin: 0 0 40px 0;
   }
 }
+
+$spaceamounts: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100);
+$sides: (top, bottom, left, right);
+
+@each $space in $spaceamounts {
+  @each $side in $sides {
+    .m#{str-slice($side, 0, 1)}#{$space} {
+      margin-#{$side}: #{$space}px !important;
+    }
+  
+    .p#{str-slice($side, 0, 1)}#{$space} {
+      padding-#{$side}: #{$space}px !important;
+    }
+  }
+}
 // Modules
 @import "modules/header.scss";
 @import "modules/footer.scss";
@@ -264,3 +288,4 @@ section, .section {
 @import "modules/catalog.scss";
 @import "modules/product-single.scss";
 @import "modules/pages.scss";
+@import "modules/basket.scss";

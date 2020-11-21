@@ -24,7 +24,7 @@
     font-family: "pion-icon";
     font-style: normal;
     font-weight: normal;
-    speak: never;
+    //speak: never;
    
     display: inline-block;
     text-decoration: inherit;
@@ -59,3 +59,7 @@
   .icon-basket:before { content: '\e802'; } /* '' */
   .icon-map:before { content: '\e803'; } /* '' */
   .icon-phone:before { content: '\e804'; }
+  .icon-help-circled:before { content: '\e807'; } /* '' */
+  .icon-help:before { content: '\f128'; } /* '' */
+  .icon-info:before { content: '\f129'; } /* '' */
+  .icon-search:before { content: '🔍'; } /* '\1f50d' */
