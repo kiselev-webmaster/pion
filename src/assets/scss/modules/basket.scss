@@ -37,6 +37,12 @@
                 color: #1A2026;
             }
         }
+        .action{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
         a.add-postcard{
             font-family: Lora;
             font-style: normal;
@@ -53,6 +59,31 @@
                 background: #E3A33A;
                 color: #fff;
             }
+        }
+        a.pin-down{
+            font-family: Lora;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 18px;
+            text-align: center;
+            background: #E3A33A;
+            color: #fff;
+            height: 30px;
+            border: 1px solid #E3A33A;
+            border-radius: 30px;
+            padding: 5px 20px;
+        }
+        a.text-enter{
+            font-family: Lora;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 18px;
+            text-align: center;
+            color: #E3A33A;
+            text-decoration: underline;
+            margin-top: 5px;
         }
         .count-wrap{
             font-family: Lora;
