@@ -18,3 +18,57 @@ mixin checkbox(label, name_input)
   .checkbox-wrap
     label= label
     input(type="checkbox", name= name_input)
+
+
+mixin input(type_input, label_input, required, status)
+  if status== 'error'
+    .input-wrap.error
+      .error-msg это поле обязательно
+      if required
+        input(type= type_input, required)
+      else
+        input(type= type_input)
+      label= label_input
+  else
+    .input-wrap
+      if required
+        input(type= type_input, required)
+      else
+        input(type= type_input)
+      label= label_input
+    
+mixin textarea(error)
+  if error
+    .textarea-wrap.error
+      .error-msg введен некоорректный текст
+      textarea(name="", rows="4", placeholder='Комментарий к заказу' )
+  else
+    .textarea-wrap
+      textarea(name="", rows="4", placeholder='Комментарий к заказу' )
+
+mixin time-input()
+  - var h = 0;
+  - var m = -5;
+  .time-wrap 
+    .time-border
+        .time-label <sup>*</sup>с
+        .hour-wrap
+          select(name="")
+            while h < 25
+              option()= h++
+          .hour-label : 
+          select(name="")
+            while m < 55
+              option()= m+=5
+        .time-label до
+        .hour-wrap
+          select(name="")
+            - var h = 0;
+            while h < 25
+              option()= h++
+          .hour-label : 
+          select(name="")
+            - var m = -5;
+            while m < 55
+              option()= m+=5
+    .offing-time Ближайшее время <span>сегодня с 13:45</span>

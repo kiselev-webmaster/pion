@@ -1,0 +1,21 @@
+- var flowers = ['Альстромерия', 'Гвоздики', 'Гладиолусы', 'Ирисы', 'Лилии', 'Нарциссы', 'Пионовидные розы', 'Ранункулюсы', 'Ромашка', 'Фрезия'];
+
+#choice-flowers(style="display: none")
+    .grid
+        .col
+            .checkbox-wrap.vertical
+                each item in flowers
+                    input(type="checkbox", name="checkbox", id="checkbox-1")
+                    label(for="checkbox-1")= item
+        .col
+            .checkbox-wrap.vertical
+                each item in flowers
+                    input(type="checkbox", name="checkbox", id="checkbox-1")
+                    label(for="checkbox-1")= item
+        .col
+            .checkbox-wrap.vertical
+                each item in flowers
+                    input(type="checkbox", name="checkbox", id="checkbox-1")
+                    label(for="checkbox-1")= item
+    .btn-wrap.right
+        a(href="#") Подобрать

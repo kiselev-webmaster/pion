@@ -33,11 +33,10 @@ header
           a(href="") корзина <span class='icon-basket'></span>
   .header-bottom
     .container.row.middle.between
-      a(href="") <span class='icon-flowers'></span> Подобрать букет
+      a(data-fancybox, data-src="#choice-flowers", href="javascript:;") <span class='icon-flowers'></span> Подобрать букет
       ul
         each item in navigation
             li
               a(href="#")=item
       .header-search
         input(type="text", placeholder='Поиск букета')
-

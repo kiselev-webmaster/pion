@@ -10,6 +10,7 @@
 @import "utils/tabs";
 @import "utils/popup";
 @import "utils/form";
+@import "utils/btn";
 html {
   line-height: $mainLineHeight;
 	font-size: $mainFontSize;
@@ -129,27 +130,7 @@ section, .section {
   }
 }
 
-.btn-wrap{
-  a{
-    display: inline-block;
-    font-family: Lora;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 26px;
-    text-align: center;
-    color: #FBF8F5;
-    padding: 10px 25px;
-    border-radius: 50px;
-    background: #E3A33A;
-    &:hover{
-      background: #E3971B;
-    }
-  }
-  &.center{
-    text-align: center;
-  }
-}
+
 
 .text-block-wrap{
 
@@ -289,3 +270,4 @@ $sides: (top, bottom, left, right);
 @import "modules/product-single.scss";
 @import "modules/pages.scss";
 @import "modules/basket.scss";
+@import "modules/order.scss";

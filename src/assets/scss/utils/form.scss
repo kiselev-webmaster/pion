@@ -1,0 +1,219 @@
+.input-wrap{
+    padding: 10px 30px;
+    background: #F1EBE5;
+    border-radius: 65px;
+    margin: 20px 0;
+    position: relative;
+    label{
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 22px;
+        color: #1A2026;
+        position: absolute;
+        left: 30px;
+        top: 18px;
+        transition: all 0.3s ease;
+        //line-height: 35px;
+    }
+    &.error{
+        border: 1px solid #FF6B00;
+        label{
+            color: #FF6B00;
+        }
+    }
+    .error-msg{
+        position: absolute;
+        top: -20px;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 22px;
+        color: #FF6B00;
+    }
+    input:required+label{
+        &:before{
+            content: '*';
+            color: #FF6B00;
+        }
+    }
+    input[type='text'], input[type='tel'], input[type='email'], input[type='date']{
+        width: 100%;
+        padding: 10px 0;
+        background: transparent;
+        &:focus + label, &:valid + label{
+            font-size: 10px;
+            top: 0px;
+            &:before{
+                display: none;
+            }
+        }
+    }
+
+}
+.col .col > .input-wrap{
+    margin: 0;
+}
+.textarea-wrap{
+    textarea{
+        background: #F1EBE5;
+        border-radius: 20px;
+        padding: 14px 20px;
+        width: 100%;
+    }
+    &.error{
+        textarea{border: 1px solid #FF6B00;}
+    }
+    .error-msg{
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 22px;
+        color: #FF6B00;
+        margin-left: 20px;
+    }
+}
+
+.time-wrap{
+    &.error{
+        .time-border{
+            border: 2px solid #FF6B00;
+        }
+        .hour-wrap{
+            background: #FF6B00;
+            color: #fff;
+        }
+    }
+    .time-border{
+        border: 2px solid #F1EBE5;
+        box-sizing: border-box;
+        border-radius: 65px;
+        padding: 10px 30px;
+
+        display: flex;
+        align-items: center;
+        .time-label, .hour-label{
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 22px;
+            color: #1A2026;
+            sup{
+                color: #FF6B00;
+            }
+        }
+        .hour-wrap{
+            background: #F1EBE5;
+            box-sizing: border-box;
+            border-radius: 65px;
+            padding: 5px 10px;
+            margin: 0 10px;
+
+            display: flex;
+            align-items: center;
+            .hour-label{
+                padding: 0 5px;
+            }
+            select{
+                background: transparent;
+            }
+        }
+    }
+    .offing-time{
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 22px;
+        color: #939598;
+        margin-left: 30px;
+        span{
+            color: #1A2026;
+            text-decoration: underline;
+            font-weight: 400;
+        }
+    }
+}
+
+.radio-wrap{
+    label{
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 22px;
+        color: #939598;
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+        cursor: pointer;
+        &:before{
+            content: '';
+            display: block;
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            //border: 2px solid #939598;
+            box-shadow: 0 0 0 2px #939598;
+            box-sizing: border-box;
+            margin-right: 5px;
+            transition: all .3s;
+            
+        }
+    }
+    input:checked+label{
+        color: #1A2026;
+        &:before{
+            background: #FF6B00;
+            border: 2px solid #fff;
+            box-shadow: 0 0 0 1px #939598;
+            height: 10.5px;
+            width: 10.5px;
+        }
+    }
+    input{display: none;}
+    &.vertical{
+        display: flex;
+        flex-direction: column;
+    }
+    &.gorizontal{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.checkbox-wrap{
+    label{
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 22px;
+        color: #939598;
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+        cursor: pointer;
+        position: relative;
+        &:before{
+            content: '';
+            display: block;
+            height: 10px;
+            width: 10px;
+            //border: 2px solid #939598;
+            box-shadow: 0 0 0 2px #939598;
+            box-sizing: border-box;
+            margin-right: 5px;
+            transition: all .3s;
+            
+        }
+    }
+    input:checked+label{
+        color: #1A2026;
+        &:after{
+            content: '✓';
+            display: block;
+            position: absolute;
+            color: #FF6B00;
+        }
+    }
+    input{display: none;}
+    &.vertical{
+        display: flex;
+        flex-direction: column;
+    }
+    &.gorizontal{
+        display: flex;
+        flex-direction: row;
+    }
+}

@@ -146,4 +146,20 @@
             }
         }
     }
+    .summa-wrap{
+        text-align: right;
+        .price{
+            margin: 15px 0;
+            span{
+                font-family: Lora;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 30px;
+                line-height: 50px;
+                text-align: right;
+                color: #1A2026;
+                margin-left: 20px;
+            }
+        }
+    }
 }

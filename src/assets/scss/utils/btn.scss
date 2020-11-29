@@ -1,0 +1,33 @@
+.btn-wrap{
+    &>*{
+      display: inline-block;
+      font-family: Lora;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 26px;
+      text-align: center;
+      color: #FBF8F5;
+      padding: 10px 25px;
+      border-radius: 50px;
+      background: #E3A33A;
+      cursor: pointer;
+      &:hover{
+        background: #E3971B;
+      }
+      &.light{
+           background: #F8DDC3;
+           color: #1A2026;
+           &:hover{
+               color: #fff;
+               background: #E3A33A;
+           }
+      }
+    }
+    &.center{
+      text-align: center;
+    }
+    &.right{
+        text-align: right;
+    }
+  }
