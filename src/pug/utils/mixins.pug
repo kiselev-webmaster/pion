@@ -4,7 +4,7 @@ mixin product_card(img, title, price, price_old)
       .product-image
         img(src= img, alt= title)
         .hover
-          a(href="#", class="pay" ) Купить
+          a(href="#", class="pay") Купить
           a(href="#") Подробнее
       .product-info
         .left
@@ -13,6 +13,7 @@ mixin product_card(img, title, price, price_old)
           .price= price
           if price_old
             .price-old= price_old
+
 
 mixin checkbox(label, name_input)
   .checkbox-wrap
