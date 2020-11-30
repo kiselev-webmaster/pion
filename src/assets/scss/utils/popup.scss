@@ -1,7 +1,22 @@
+.fancybox-slide--html .fancybox-close-small {
+    color: #e3a33a;
+    border: 1px solid #e3a33a;
+    border-radius: 50%;
+    padding: 0px!important;
+    margin: 10px;
+    height: 20px;
+    width: 20px;
+}
 #choice-flowers{
-    width: 80%;
+    width: 60%;
     background: #fbf8f5;
     label{
         margin-bottom: 5px;
+    }
+}
+
+#status-popup{
+    a{
+        width: 100%;
     }
 }

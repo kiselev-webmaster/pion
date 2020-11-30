@@ -19,3 +19,11 @@
                     label(for="checkbox-1")= item
     .btn-wrap.right
         a(href="#") Подобрать
+
+#status-popup(style="display:none")
+    .block-title.center Статус заказа
+    +input('text', 'Статус заказа')
+    +input('tel', 'Номер телефона')
+    .btn-wrap
+        a(href="#") Отправить
+    .status-result
