@@ -5,6 +5,9 @@
     .product-card-wrap{
         width: 25%;
         padding: 10px;
+        @include mq('phone') {
+            width: 100%;
+        }
         .product-card{
             a{display: block}
 

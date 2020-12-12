@@ -5,13 +5,17 @@
     <title>Главная - Король Пион</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-  <link href="/assets/css/app.d38b20d589b827f3451d.css" rel="stylesheet"></head>
+  <link href="/assets/css/app.7232d42b4a3442d5a0cc.css" rel="stylesheet"></head>
   <body>
     <div class="wrapper">
-<header>
+<header class="desktop">
   <div class="header-top">
     <div class="container row middle between">
-      <div class="logo"><a href="#"><img src="/assets/img/logo.png" alt="logo"></a></div>
+      <div class="logo"><a href="#"><img src="/assets/img/logo-2.png" alt="logo">
+          <div class="text">
+            <div class="site-title">Король пион</div>
+            <div class="site-desc">студия цветов и подарков</div>
+          </div></a></div>
       <div class="top-nav">
         <ul>
           <li><a href="index.html">О нас</a></li>
@@ -23,7 +27,7 @@
       </div>
       <div class="top-contact">
         <div class="soc-icon"><a href=""><img src="/assets/img/Viber.svg" alt=""></a><a href=""><img src="/assets/img/tg.svg" alt=""></a><a href=""><img src="/assets/img/WhatsApp.svg" alt=""></a></div>
-        <div class="tel-number"><a href="tel:+79126774846">+7(912)677-48-46</a></div>
+        <div class="tel-number"><a href="tel:+73433822059">+7(343)382-20-59</a><a href="tel:+79126774846">+7(912)677-48-46</a><a data-fancybox data-src="#feedback-popup" href="javascript:;">заказать звонок</a></div>
       </div>
     </div>
   </div>
@@ -39,15 +43,67 @@
   <div class="header-bottom">
     <div class="container row middle between"><a data-fancybox data-src="#choice-flowers" href="javascript:;"><span class='icon-flowers'></span> Подобрать букет</a>
       <ul>
-        <li><a href="#">Акции</a></li>
-        <li><a href="#">Хит продаж</a></li>
-        <li><a href="#">Букеты</a></li>
-        <li><a href="#">Свадебные</a></li>
-        <li><a href="#">Цвет</a></li>
-        <li><a href="#">Время года</a></li>
-        <li><a href="#">Повод</a></li>
-        <li><a href="#">Цена</a></li>
-        <li><a href="#">Подарки</a></li>
+        <li><a href="#">Акции</a>
+        </li>
+        <li><a href="#">Хит продаж</a>
+        </li>
+        <li><a href="#">Букеты</a>
+        </li>
+        <li><a href="#">Свадебные</a>
+        </li>
+        <li><a href="#">Цвет</a>
+        </li>
+        <li><a href="#">Время года</a>
+        </li>
+        <li><a href="#">Повод</a>
+          <ul class="sub-ul">
+            <li>
+              <div class="grid">
+                <div class="col">
+                  <div class="sub-title">Повод</div>
+                  <ul>
+                    <li><a href="#">День рождения</a></li>
+                    <li><a href="#">Извинение</a></li>
+                    <li><a href="#">Комплимент</a></li>
+                    <li><a href="#">На первое свидание</a></li>
+                    <li><a href="#">Поздравление</a></li>
+                    <li><a href="#">Свадьба</a></li>
+                  </ul>
+                </div>
+                <div class="col">
+                  <div class="sub-title">Праздник</div>
+                  <ul>
+                    <li><a href="#">Новый год</a></li>
+                    <li><a href="#">1 сентября</a></li>
+                    <li><a href="#">14 февраля</a></li>
+                    <li><a href="#">23 февраля</a></li>
+                    <li><a href="#">8 марта</a></li>
+                    <li><a href="#">Выпускной</a></li>
+                    <li><a href="#">День матери</a></li>
+                    <li><a href="#">День святого Валентина</a></li>
+                    <li><a href="#">День учителя</a></li>
+                  </ul>
+                </div>
+                <div class="col">
+                  <div class="sub-title">Кому</div>
+                  <ul>
+                    <li><a href="#">Бабушке</a></li>
+                    <li><a href="#">Букеты для любимой девушки</a></li>
+                    <li><a href="#">Букеты для мужчин</a></li>
+                    <li><a href="#">Букеты цветов для Мамы</a></li>
+                    <li><a href="#">Коллеге</a></li>
+                    <li><a href="#">Молодоженам</a></li>
+                    <li><a href="#">Учителю</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#">Цена</a>
+        </li>
+        <li><a href="#">Подарки</a>
+        </li>
       </ul>
       <div class="header-search">
         <input type="text" placeholder="Поиск букета">
@@ -55,6 +111,7 @@
     </div>
   </div>
 </header>
+<header class="mobile"></header>
       <div class="content-wrapper">
         <section>
           <div class="container">
@@ -609,6 +666,18 @@
         <div class="btn-wrap"><a href="#">Отправить</a></div>
         <div class="status-result"></div>
       </div>
+      <div id="feedback-popup" style="display:none">
+        <div class="block-title center">Заказать звонок</div>
+        <div class="input-wrap">
+          <input type="text">
+          <label>Ваше имя</label>
+        </div>
+        <div class="input-wrap">
+          <input type="tel">
+          <label>Номер телефона</label>
+        </div>
+        <div class="btn-wrap"><a href="#">Отправить</a></div>
+      </div>
 <footer>
   <div class="container row between">
     <div class="col"><a href="#"><img src="/assets/img/logo.png" alt="logo"></a>
@@ -638,5 +707,5 @@
   </div>
 </footer>
     </div>
-  <script type="text/javascript" src="/assets/js/vendors.d38b20d589b827f3451d.js"></script><script type="text/javascript" src="/assets/js/app.d38b20d589b827f3451d.js"></script></body>
+  <script type="text/javascript" src="/assets/js/vendors.7232d42b4a3442d5a0cc.js"></script><script type="text/javascript" src="/assets/js/app.7232d42b4a3442d5a0cc.js"></script></body>
 </html>

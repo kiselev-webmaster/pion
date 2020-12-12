@@ -1,12 +1,15 @@
 - var top_nav = [{name: 'О нас', link: 'index.html'}, {name: 'Оформление свадеб', link: 'services.html'}, {name: 'Доставка и оплата', link: 'about.html'}, {name: 'Отзывы', link: 'portfolio.html'}, {name: 'Контакты', link: 'contacts.html'}];
 - var navigation = ['Акции', 'Хит продаж', 'Букеты', 'Свадебные', 'Цвет', 'Время года', 'Повод', 'Цена', 'Подарки'];
 
-header
+header.desktop
   .header-top
     .container.row.middle.between
       .logo
         a(href="#")
-          img(src="/assets/img/logo.png", alt="logo")
+          img(src="/assets/img/logo-2.png", alt="logo")
+          .text
+            .site-title Король пион
+            .site-desc студия цветов и подарков
       .top-nav
         ul
           each item in top_nav
@@ -22,7 +25,9 @@ header
           a(href="")
             img(src="/assets/img/WhatsApp.svg", alt="")
         .tel-number
+          a(href="tel:+73433822059") +7(343)382-20-59
           a(href="tel:+79126774846") +7(912)677-48-46
+          a(data-fancybox, data-src="#feedback-popup", href="javascript:;") заказать звонок
   .header-middle
     .container.row.middle.end
       .site-title Доставка цветов в Екатеринбурге
@@ -38,5 +43,65 @@ header
         each item in navigation
             li
               a(href="#")=item
+              if(item=='Повод')
+                ul.sub-ul
+                  li
+                    .grid
+                      .col
+                        .sub-title Повод
+                        ul
+                          li
+                            a(href='#') День рождения
+                          li
+                            a(href='#') Извинение
+                          li
+                            a(href='#') Комплимент
+                          li
+                            a(href='#') На первое свидание
+                          li
+                            a(href='#') Поздравление
+                          li
+                            a(href='#') Свадьба
+                      .col
+                        .sub-title Праздник
+                        ul
+                          li
+                            a(href='#') Новый год
+                          li
+                            a(href='#') 1 сентября
+                          li
+                            a(href='#') 14 февраля
+                          li
+                            a(href='#') 23 февраля
+                          li
+                            a(href='#') 8 марта
+                          li
+                            a(href='#') Выпускной
+                          li
+                            a(href='#') День матери
+                          li
+                            a(href='#') День святого Валентина
+                          li
+                            a(href='#') День учителя
+                      .col
+                        .sub-title Кому
+                        ul
+                          li
+                            a(href='#') Бабушке
+                          li
+                            a(href='#') Букеты для любимой девушки
+                          li
+                            a(href='#') Букеты для мужчин
+                          li
+                            a(href='#') Букеты цветов для Мамы
+                          li
+                            a(href='#') Коллеге
+                          li
+                            a(href='#') Молодоженам
+                          li
+                            a(href='#') Учителю
       .header-search
         input(type="text", placeholder='Поиск букета')
+
+
+header.mobile

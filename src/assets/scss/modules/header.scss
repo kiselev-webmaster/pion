@@ -29,6 +29,30 @@ header{
 .header-top{
     padding: 30px 0;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.08);
+    .logo a{
+        display: flex;
+
+        .text{
+            margin-left: 5px;
+        }
+        .site-title{
+            font-family: Lora;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            text-align: center;
+            color: #1A2026;
+            border-bottom: 1px solid #d8d8d8;
+        }
+        .site-desc{
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 10px;
+            text-align: center;
+            color: #939598;
+        }
+    }
     .top-nav{
         flex: 1;
     }
@@ -44,8 +68,23 @@ header{
         }
         .tel-number{
             margin-left: 20px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
             a{
                 color: #1A2026;
+                &:nth-of-type(2){
+                    color: #939598;
+                }
+                &:nth-of-type(3){
+                    color: #E3A33A;
+                    text-decoration: underline;
+                }
+                &:hover{
+                    color: #E3A33A;
+                }
             }
         }
     }
@@ -84,4 +123,62 @@ header{
         border-radius: 30px;
         padding: 10px 15px;
     }
+    ul{
+        position: relative;
+        li{
+            &:hover{
+                ul{
+                    display: block;
+                }
+            }
+        }
+        ul.sub-ul{
+            display: none;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            right: 0;
+            padding-top: 40px;
+            z-index: 99999;
+            text-align: left;
+            .sub-title{
+                text-align: left;
+                padding-bottom: 20px;
+                font-family: Lora;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 18px;
+                color: #979797;
+
+            }
+            ul{
+                display: block;
+                li{
+                    padding: 0;
+                    text-align: left;
+                    padding-bottom: 5px;
+                }
+            }
+            li{
+                width: 100%;
+                display: block;
+                padding: 20px;
+                background: #fbf8f5;
+            }
+        }
+    }
 }
+
+header.desktop{
+    display: block;
+    @include mq('phone') {
+        display: none;  
+    }
+}
+header.mobile{
+    display: none;
+    @include mq('phone') {
+        display: block;
+    }
+}
+
