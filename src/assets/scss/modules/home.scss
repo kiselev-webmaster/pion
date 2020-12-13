@@ -1,20 +1,41 @@
 .home-slider-wrap{
     padding: 100px 0;
+    @include mq('phone') {
+        padding: 50px 0;
+    }
     p{
         font-weight: 300;
         font-size: 20px;
         line-height: 30px;
+        @include mq('phone') {
+            font-size: 16px;
+            line-height: normal;
+        }
     }
     .left{
         padding-right: 40px;
+        @include mq('phone') {
+            padding-right: 0;
+        }
         
     }
     .left, .right{
         flex: 1;
         width: 50%;
+        @include mq('phone') {
+            width: 100%;
+        }
     }
     .btn-wrap{
         margin-top: 40px;
+        @include mq('phone') {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            a{
+                width: 80%;
+            }
+        }
     }
     .swiper-controls{
         display: flex;

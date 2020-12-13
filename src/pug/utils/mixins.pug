@@ -13,6 +13,10 @@ mixin product_card(img, title, price, price_old)
           .price= price
           if price_old
             .price-old= price_old
+      .mobile-actions
+        a(href="#", class="pay") Купить
+        a(href="#") Быстрый заказ
+
 
 
 mixin checkbox(label, name_input)

@@ -1,5 +1,8 @@
 .row{
     display: flex;
+    @include mq('phone') {
+        flex-direction: column;
+    }
     &.middle{
         align-items: center;
     }
