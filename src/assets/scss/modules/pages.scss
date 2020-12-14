@@ -47,6 +47,11 @@
         font-size: 40px;
         line-height: 60px;
         color: #1A2026;
+        @include mq('phone') {
+            font-size: 22px;
+            line-height: normal;
+            margin-top: 20px;
+        }
 
     }
 }
@@ -117,6 +122,10 @@
         font-size: 30px;
         line-height: 50px;
         color: #1A2026;
+        @include mq('phone') {
+            font-size: 22px;
+            line-height: normal;
+        }
     }
     a{
         font-family: Lora;
@@ -125,6 +134,11 @@
         font-size: 30px;
         line-height: 50px;
         color: #1A2026;
+        @include mq('phone') {
+            font-size: 22px;
+            line-height: normal;
+            margin: 20px 0;
+        }
     }
     p{
         font-family: Open Sans;
@@ -133,6 +147,12 @@
         font-size: 20px;
         line-height: 30px;
         color: #1A2026;
+        @include mq('phone') {
+            font-size: 16px;
+            line-height: normal;
+            margin: 20px 0;
+        }
+
 
     }
 }

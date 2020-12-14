@@ -1,5 +1,9 @@
 .breadcrumbs{
     padding-top: 40px;
+    @include mq('phone') {
+        padding-top: 0;
+        margin: 15px 0;
+    }
 }
 .product-single-wrap{
 
@@ -20,6 +24,10 @@
             line-height: 40px;
             color: #1A2026;
             margin-bottom: 60px;
+            @include mq('phone') {
+                font-size: 23px;
+                margin: 0 0 20px 0;
+            }
         }
         .price-wrap{
             span.price{
@@ -113,6 +121,14 @@
         }
         .btn-wrap{
             margin: 25px 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            a{
+                width: 80%;
+            }
         }
     }
 }
@@ -125,6 +141,10 @@
         font-size: 20px;
         line-height: 40px;
         color: #1A2026;
+        @include mq('phone') {
+            font-size: 14px;
+            line-height: normal;
+        }
     }
 }
 .notice{
@@ -136,6 +156,10 @@
         font-size: 40px;
         line-height: 40px;
         color: #1A2026;
+        @include mq('phone') {
+            font-size: 22px;
+            line-height: normal;
+        }
     }
     p{
         font-family: Open Sans;
@@ -145,5 +169,9 @@
         line-height: 40px;
         color: #1A2026;
         margin: 20px 0;
+        @include mq('phone') {
+            font-size: 14px;
+            line-height: normal;
+        }
     }
 }

@@ -136,6 +136,11 @@ section, .section {
     line-height: 28px;
     color: #1A2026;
     margin: 25px 20% 0 20%;
+    @include mq('phone') {
+      margin: 15px 0 0 0;
+      font-size: 14px;
+      line-height: normal;
+    }
   }
 }
 
@@ -153,15 +158,31 @@ section, .section {
     flex-direction: column;
     justify-content: center;
     min-height: 200px;
+    @include mq('phone') {
+      padding: 20px 0;
+      min-height: 1px;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+    }
     &.center{
       text-align: center;
+      @include mq('phone') {
+        text-align: left;
+      }
     }
     img{
       margin-bottom: 20px;
       height: 38px;
+      @include mq('phone') {
+        height: 22px;
+        margin-bottom: 0;
+        margin-right: 20px;
+      }
     }
     .text-container{
       z-index: 999;
+      order: 2;
     }
     .text-title{
       font-family: Lora;
@@ -175,6 +196,10 @@ section, .section {
       font-weight: 300;
       font-size: 16px;
       line-height: 28px;
+      @include mq('phone') {
+        font-size: 14px;
+        line-height: normal;
+      }
     }
   }
   .number{
@@ -188,6 +213,14 @@ section, .section {
     left: 0;
     right: 0;
     z-index: -1;
+    @include mq('phone') {
+      position: inherit;
+      top: 0;
+      font-size: 100px;
+      order: 1;
+      margin-right: 20px;
+      margin-left: 20px;
+    }
   }
 
   &.style-light{
@@ -204,10 +237,14 @@ section, .section {
       color: #1A2026;
       top: 0;
       margin-right: 20px;
+      
     }
   }
   &.center{
     text-align: center;
+    @include mq('phone') {
+      text-align: left;
+    }
   }
 }
 
@@ -225,6 +262,12 @@ section, .section {
   line-height: 50px;
   color: #FBF8F5;
   margin: 40px 0 80px 0;
+  .title{
+    @include mq('phone') {
+      font-size: 22px;
+      line-height: normal;
+    }
+  }
 }
 
 .block-two-text{
@@ -244,6 +287,10 @@ section, .section {
     color: #1A2026;
 
     line-height: 40px;
+    @include mq('phone') {
+      font-size: 22px;
+      line-height: normal;
+    }
   }
   p{
     font-family: Open Sans;
@@ -253,6 +300,11 @@ section, .section {
     line-height: 40px;
     color: #1A2026;
     margin: 0 0 40px 0;
+    @include mq('phone') {
+      font-size: 14px;
+      line-height: normal;
+      margin: 0 0 20px 0;
+    }
   }
 }
 

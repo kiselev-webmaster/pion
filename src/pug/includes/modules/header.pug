@@ -109,6 +109,21 @@ header.mobile
     .mobile-menu
       .burger
         .burger-icon
+      .menu-wrap
+        .mobile-search
+          input(type="text", placeholder='Поиск букета')
+        .nav-1
+          ul
+            li
+              a(data-fancybox, data-src="#choice-flowers", href="javascript:;") <span class='icon-flowers'></span> Подобрать букет
+            each item in navigation
+                li
+                  a(href="#")=item
+        .nav-2
+          ul
+            each item in top_nav
+              li
+                a(href= item.link)=item.name
     .logo
       a(href="#")
         img(src="/assets/img/logo-2.png", alt="logo")

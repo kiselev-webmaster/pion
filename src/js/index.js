@@ -36,25 +36,10 @@ $(document).ready(function(){
     appendArrows: $('.home-slider-arrows')
   });
 
+  $('.mobile-menu .burger').on('click', function(){
+    $('.mobile-menu').toggleClass('active');
+  });
 });
-
-
-  // new Swiper('div.home-reviews', {
-  //   loop: true,
-  //   slidesPerView: 3,
-  
-  //   // If we need pagination
-  //   pagination: {
-  //     el: '.home-reviews-wrap .swiper-pagination',
-  //     clickable: true 
-  //   },
-  
-  //   // Navigation arrows
-  //   navigation: {
-  //     nextEl: '.swiper-button-next',
-  //     prevEl: '.swiper-button-prev',
-  //   }
-  // });
 
 
 

@@ -189,6 +189,7 @@ header.mobile{
         align-items: center;
         padding: 10px 0;
         box-shadow: none;
+        position: relative;
     }
     .mobile-menu{
         .burger{
@@ -214,6 +215,43 @@ header.mobile{
                     background: #1A2026;
                     transform: translateY(7px);
 
+                }
+            }
+        }
+        .menu-wrap{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 100%;
+            background: #fbf8f5;
+            display: none;
+            .mobile-search{
+                box-shadow: 0 0 10px rgba(0,0,0,.08) inset;
+                input{
+                    background: transparent;
+                    text-align: center;
+                    width: 100%;
+                    font-size: 14px;
+                    padding: 10px;
+                }
+            }
+            ul{
+                display: flex;
+                flex-direction: column;
+                li{
+                    text-align: left;
+                    padding: 3px 0;
+                    a{
+                        font-size: 12px;
+                    }
+                }
+            }
+            .nav-1{
+                margin-bottom: 15px;
+                li{
+                    text-align: center;
+                    border-bottom: 1px solid #e4e4e4;
+                    
                 }
             }
         }
@@ -246,6 +284,9 @@ header.mobile{
                         margin-bottom: -1px;
                     }
                 }
+            }
+            .menu-wrap{
+                display: block;
             }
         }
     }
