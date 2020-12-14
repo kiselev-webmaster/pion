@@ -5,38 +5,56 @@ const $ = require("jquery");
 const jQuery = require("jquery");
 window.jQuery = $;
 const fancybox = require("@fancyapps/fancybox"); 
-
+const slick = require("slick-carousel");
 import Swiper from "swiper";
 
-new Swiper('div.home-slider', {
-    loop: true,
-    pagination: {
-      el: '.swiper-pagination',
-    },
-  
-    // Navigation arrows
-    navigation: {
-      nextEl: '.home-slider-wrap .button-next',
-      prevEl: '.home-slider-wrap .button-prev',
-    }
-  }),
 
-  new Swiper('div.home-reviews', {
-    loop: true,
-    slidesPerView: 3,
-  
-    // If we need pagination
-    pagination: {
-      el: '.home-reviews-wrap .swiper-pagination',
-      clickable: true 
-    },
-  
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    }
+$(document).ready(function(){
+  $('.home-reviews').slick({
+    //dots: true,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    adaptiveHeight: true,
+    customPaging: 20,
+    responsive: [
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          
+        }
+      }
+    ]
   });
+  $('.home-slider').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    adaptiveHeight: true,
+    appendArrows: $('.home-slider-arrows')
+  });
+
+});
+
+
+  // new Swiper('div.home-reviews', {
+  //   loop: true,
+  //   slidesPerView: 3,
+  
+  //   // If we need pagination
+  //   pagination: {
+  //     el: '.home-reviews-wrap .swiper-pagination',
+  //     clickable: true 
+  //   },
+  
+  //   // Navigation arrows
+  //   navigation: {
+  //     nextEl: '.swiper-button-next',
+  //     prevEl: '.swiper-button-prev',
+  //   }
+  // });
 
 
 

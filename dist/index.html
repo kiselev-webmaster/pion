@@ -6,7 +6,9 @@
     <title>Главная - Король Пион</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-  <link href="/assets/css/app.132670747150f06d0e5f.css" rel="stylesheet"></head>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+  <link href="/assets/css/app.3d0c0ec5015bd9bc88c3.css" rel="stylesheet"></head>
   <body>
     <div class="wrapper">
 <header class="desktop">
@@ -559,17 +561,8 @@
                 <div class="btn-wrap"><a href="#">Отправить фото</a></div>
               </div>
               <div class="right">
-                <div class="swiper-container home-slider">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="/assets/img/home-slider.png"></div>
-                    <div class="swiper-slide"><img src="/assets/img/home-slider.png"></div>
-                    <div class="swiper-slide"><img src="/assets/img/home-slider.png"></div>
-                  </div>
-                </div>
-                <div class="swiper-controls">
-                  <div class="button-prev"><img src="/assets/img/left.svg" alt="left"></div>
-                  <div class="button-next"><img src="/assets/img/right.svg" alt="right"></div>
-                </div>
+                <div class="home-slider"><img src="/assets/img/home-slider.png"><img src="/assets/img/home-slider.png"><img src="/assets/img/home-slider.png"></div>
+                <div class="home-slider-arrows"></div>
               </div>
             </div>
           </div>
@@ -577,35 +570,22 @@
         <section class="home-reviews-wrap">
           <div class="container">
             <div class="block-title center">Отзывы</div>
-            <div class="swiper-container home-reviews">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="reviews-item"><img src="/assets/img/reviews-1.png" alt="">
-                    <div class="name">Григорий</div>
-                    <div class="text">Смело могу рекомендовать данный магазин, потому что сюда действительно хочется вернуться. Цветы очень красивые и свежие. </div><a href="">Читать весь отзыв</a>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="reviews-item"><img src="/assets/img/reviews-2.png" alt="">
-                    <div class="name">Карина</div>
-                    <div class="text">Обалденные тюльпаны заказывали, букет был составлен восхитительно. Магазин удобный, работает без выходных, что важно!</div><a href="">Читать весь отзыв</a>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="reviews-item"><img src="/assets/img/reviews-3.png" alt="">
-                    <div class="name">Алена Моренко</div>
-                    <div class="text">Очень крутой магазин! Покупала букет маме на день рождения, она просто пищала от восторга=))) Классное обслуживание, цветы...</div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="reviews-item"><img src="/assets/img/reviews-1.png" alt="">
-                    <div class="name">Константин</div>
-                    <div class="text">Смело могу рекомендовать данный магазин, потому что сюда действительно хочется вернуться. Цветы очень красивые и свежие. </div>
-                  </div>
-                </div>
+            <div class="home-reviews">
+              <div class="reviews-item"><img src="/assets/img/reviews-1.png" alt="">
+                <div class="name">Григорий</div>
+                <div class="text">Смело могу рекомендовать данный магазин, потому что сюда действительно хочется вернуться. Цветы очень красивые и свежие. </div><a href="">Читать весь отзыв</a>
               </div>
-              <div class="swiper-controls">
-                <div class="swiper-pagination"></div>
+              <div class="reviews-item"><img src="/assets/img/reviews-2.png" alt="">
+                <div class="name">Карина</div>
+                <div class="text">Обалденные тюльпаны заказывали, букет был составлен восхитительно. Магазин удобный, работает без выходных, что важно!</div><a href="">Читать весь отзыв</a>
+              </div>
+              <div class="reviews-item"><img src="/assets/img/reviews-3.png" alt="">
+                <div class="name">Алена Моренко</div>
+                <div class="text">Очень крутой магазин! Покупала букет маме на день рождения, она просто пищала от восторга=))) Классное обслуживание, цветы...</div>
+              </div>
+              <div class="reviews-item"><img src="/assets/img/reviews-1.png" alt="">
+                <div class="name">Константин</div>
+                <div class="text">Смело могу рекомендовать данный магазин, потому что сюда действительно хочется вернуться. Цветы очень красивые и свежие. </div>
               </div>
             </div>
             <div class="btn-wrap center"><a href="#">Больше отывов на Флампе</a></div>
@@ -721,7 +701,7 @@
       <p>© 2020 г. Король Пион</p>
     </div>
     <div class="col"></div>
-    <div class="col">
+    <div class="col xs-hidden">
       <ul>
         <li><a href="#">Главная</a></li>
         <li><a href="#">Коллекции</a></li>
@@ -729,7 +709,7 @@
         <li><a href="#">Оформление свадеб</a></li>
       </ul>
     </div>
-    <div class="col">
+    <div class="col xs-hidden">
       <ul>
         <li><a href="#">Доставка и оплата</a></li>
         <li><a href="#">Отзывы</a></li>
@@ -743,5 +723,5 @@
   </div>
 </footer>
     </div>
-  <script type="text/javascript" src="/assets/js/vendors.132670747150f06d0e5f.js"></script><script type="text/javascript" src="/assets/js/app.132670747150f06d0e5f.js"></script></body>
+  <script type="text/javascript" src="/assets/js/vendors.3d0c0ec5015bd9bc88c3.js"></script><script type="text/javascript" src="/assets/js/app.3d0c0ec5015bd9bc88c3.js"></script></body>
 </html>

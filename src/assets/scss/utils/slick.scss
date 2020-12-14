@@ -1,0 +1,15 @@
+.slick-prev:before, .slick-next:before{
+    font-family: "pion-icon";
+    color: #000;
+    font-size: 32px;
+}
+.slick-prev:hover:before, .slick-prev:focus:before, .slick-next:hover:before, .slick-next:focus:before{
+    color: #e3a33a;
+}
+
+.slick-prev:before {
+    content: '\e809';
+}
+.slick-next:before {
+    content: '\e80a';
+}

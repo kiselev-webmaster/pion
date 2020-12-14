@@ -37,18 +37,28 @@
             }
         }
     }
-    .swiper-controls{
+    .home-slider-arrows{
         display: flex;
         justify-content: flex-end;
         margin-top: 20px;
-        .button-prev{
-            margin-right: 60px;
+        *{
+            position: unset;
+            margin: 0 10px;
         }
     }
 }
 
 .home-reviews-wrap{
     padding: 100px 0;
+    padding: 50px 0;
+    @include mq('phone') {
+        width: calc(100% - 40px);
+        margin: 0 auto;
+    }
+    
+    .slick-slide{
+        padding: 0 15px;
+    }
     .reviews-item{
         text-align: center;
         background: #F1EBE5;
@@ -57,12 +67,17 @@
         padding: 30px 10px;
         margin: 60px 10px 10px;
         height: 100%;
+        @include mq('phone') {
+            margin: 60px 0 20px 0;
+        }
         img{
             height: 120px;
             width: 120px;
             object-fit: cover;
             border-radius: 120px;
             margin-top: -80px;
+            margin-right: auto;
+            margin-left: auto;
         }
         .name{
             font-weight: 600;
